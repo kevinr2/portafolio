@@ -111,7 +111,7 @@
             anchors:[],
             lockAnchors: false,
             navigation: false,
-            navigationPosition: 'right',
+            navigationPosition: 'left',
             navigationTooltips: [],
             showActiveTooltip: false,
             slidesNavigation: false,
