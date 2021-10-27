@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Bubblegum+Sans&family=Finger+Paint&family=Poller+One&display=swap');
+
+
+*{
+    font-family: 'Bubblegum Sans', cursive;
+}
+h1{
+    text-align: center;
+    color: azure;
+}
+body{
+background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#toggle{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    z-index: 11;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+#toggle.active::before{
+    transform:translateY(0px) rotate(45deg);
+
+    box-shadow:  0 0px 0 #fff;
+}
+#toggle.active::after{
+    transform:translateY(0px) rotate(-45deg);
+}
+#toggle::before{
+    content: '';
+    position: absolute;
+    width: 30px; 
+    height: 2px;
+    background-color: aliceblue; 
+    transition: 0.2s;
+    transform:translateY(-10px);
+    box-shadow:  0 10px 0 #fff;
+}
+#toggle::after{
+    content: '';
+    position: absolute;
+    width: 30px; 
+    height: 2px;
+    background-color: aliceblue; 
+    transition: 0.2s;
+    transform:translateY(10px);
+}
+
+/* menu  */
+.menu{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    text-align: center;
+    left: -100%;
+    transition:   0.8s;
+    
+}
+.menu.active{
+    left: 0;
+}
+.menu >ul >li >a{
+    color: #fff;
+    line-height: 2;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Permanent Marker', cursive; 
+}
+
+a{
+    text-decoration: none;  
+}
+li{
+    list-style: none;
+}
+.navbar-k{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.bar{
+    position: fixed;
+    order: 1;
+}
+
+.bl{
+    color: #fff;
+    font-size: 2rem;
+}
+.bl:active{
+    color: aliceblue;
+}
+.bl:hover{
+    color: azure;
+}
+.bl.active{
+    opacity: -1;
+    transition: 0.2s;
+ }
