@@ -20,41 +20,27 @@ toggle.onclick= ()=>{
     menu.classList.toggle('active')
     nav.classList.toggle('active')
 }
-/* gsap*/
-/* const sect = document.querySelector('#s1')
-
-const visible = (entries)=>{
-    const entry = entries[0]
-    console.log(entry)
-    if(entry.isIntersecting=== true){
-        icon.classList.add('bl2')
-    }else{
-        icon.classList.remove('bl2')
-    }
-
-}
-
-const observer = new IntersectionObserver(visible)
-
-
-observer.observe(sect) */
-
+/*efectos menu scroll*/
 window.addEventListener('scroll',()=>{
     progreso()
 })
 const icon = document.querySelector('#nav')
+const span = document.querySelectorAll('#v1')
 const progreso = ()=>{
     let progreso = document.documentElement.scrollTop;
-    console.log("progreso: "+ progreso)
-    if (progreso >= '649' && progreso <= '1313' || progreso >='1969') {
+    console.log(progreso)
+    if (progreso >= '568' && progreso <= '1135' || progreso >='1703') {
         toggle.classList.add('toggle-2')
         icon.classList.add('bl2')
         icon.classList.remove('bl')
+        span.forEach(item => item.classList.add('navS'))
     }
     else {
         toggle.classList.remove('toggle-2')
         icon.classList.remove('bl2')
-        icon.classList.add('bl')
+        icon.classList.add('bl')  
+        span.forEach(item => item.classList.remove('navS'))
     }
 }
+
 
