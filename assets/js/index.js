@@ -5,7 +5,8 @@ const seccion = new fullpage('#fullpage',{
     navigationTooltips: ['Header', 'Section #1', 'Section # 3', 'hola'], // Tooltips que mostrara por cada boton.
     showActiveTooltip: false, // Mostrar tooltip activa.
     scrollBar: true,
-    autoScrolling: true,
+    autoScrolling: true
+
 });
 
 
@@ -26,14 +27,18 @@ window.addEventListener('scroll',()=>{
 })
 const icon = document.querySelector('#nav')
 const span = document.querySelectorAll('#v1')
+
 const progreso = ()=>{
+    
     let progreso = document.documentElement.scrollTop;
+    console.log(progreso)
     if (progreso >= '568' && progreso <= '1135' || progreso >='1703') {
         toggle.classList.add('toggle-2')
         icon.classList.add('bl2')
         icon.classList.remove('bl')
         span.forEach(item => item.classList.add('navS'))
     }
+
     else {
         toggle.classList.remove('toggle-2')
         icon.classList.remove('bl2')
