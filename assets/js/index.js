@@ -48,15 +48,44 @@ const progreso = ()=>{
 }
 /* gsap */
 
-let tl = gsap.timeline({
-    repeat:0
-})
 
-tl.from('.title-home', {
+gsap.registerPlugin(ScrollTrigger);
+
+
+
+gsap.from('.title-home', {
     duration:2,
     transformOrigin:"0 100%",
-    rotate:-90
+    stagger: 2 ,
+    rotate:-90,
+    
 })
+gsap.from('.nombre', {
+    duration:2,
+    opacity:-1,
+    delay:0.3
+})
+gsap.from('#p1', {
+    duration:2,
+    opacity:-1,
+    y:200,
+    delay:0.8
+})
+const tl = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.s2',//de donde va el tigger
+        start:"top bottom",
+        end:'bottom 100px',    
+    }
+})
+ const cuadro2 = document.querySelector('.cuadro2')
+ const iconCuadra = document.querySelector('#otro')
+ tl.from(cuadro2,{x:-300, opacity:-1,duration:3});
+ tl.from(iconCuadra,{x:300, opacity:-1,duration:2},'-=2.5');
+
+
+
+
 
     const cuadro = document.querySelector('.home-s2');
     cuadro.addEventListener("mousemove", (e)=>{
