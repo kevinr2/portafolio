@@ -28,7 +28,6 @@ const icon = document.querySelector('#nav')
 const span = document.querySelectorAll('#v1')
 const progreso = ()=>{
     let progreso = document.documentElement.scrollTop;
-    console.log(progreso)
     if (progreso >= '568' && progreso <= '1135' || progreso >='1703') {
         toggle.classList.add('toggle-2')
         icon.classList.add('bl2')
@@ -42,5 +41,27 @@ const progreso = ()=>{
         span.forEach(item => item.classList.remove('navS'))
     }
 }
+/* gsap */
 
+let tl = gsap.timeline({
+    repeat:0
+})
+
+tl.from('.title-home', {
+    duration:2,
+    transformOrigin:"0 100%",
+    rotate:-90
+})
+
+    const cuadro = document.querySelector('.home-s2');
+    cuadro.addEventListener("mousemove", (e)=>{
+        const layer = document.querySelectorAll('#icons');
+        layer.forEach((layer) =>{
+            const speed = layer.getAttribute('data-mov')
+            const x = (cuadro.innerWidth = e.pageX*speed)/100
+            const y = (cuadro.innerHeight = e.pageY*speed)/100
+            layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+        })
+    })
+ 
 
