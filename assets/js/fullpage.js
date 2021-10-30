@@ -111,7 +111,7 @@
             anchors:[],
             lockAnchors: false,
             navigation: false,
-            navigationPosition: 'right',
+            navigationPosition: 'left',
             navigationTooltips: [],
             showActiveTooltip: false,
             slidesNavigation: false,
@@ -1087,7 +1087,7 @@
                     link = options.anchors[i];
                 }
 
-                li += '<li><a href="#' + link + '"><span class="fp-sr-only">' + getBulletLinkName(i, 'Section') + '</span><span></span></a>';
+                li += '<li><a href="#' + link + '"><span class="fp-sr-only" >' + getBulletLinkName(i, 'Section') + '</span><span id="v1" class="bg-color" ></span></a>';
 
                 // Only add tooltip if needed (defined by user)
                 var tooltip = options.navigationTooltips[i];
@@ -2941,7 +2941,7 @@
 
             for(var i=0; i< numSlides; i++){
                 var slide = $(SLIDE_SEL, section)[i];
-                appendTo(createElementFromHTML('<li><a href="#"><span class="fp-sr-only">'+ getBulletLinkName(i, 'Slide', slide) +'</span><span></span></a></li>'), $('ul', nav)[0] );
+                appendTo(createElementFromHTML('<li><a href="#"  ><span class="fp-sr-only" >'+ getBulletLinkName(i, 'Slide', slide) +'</span><span ></span></a></li>'), $('ul', nav)[0] );
             }
 
             //centering it
@@ -3649,7 +3649,7 @@
     * Shows a message in the console of the given type.
     */
     function showError(type, text){
-        window.console && window.console[type] && window.console[type]('fullPage: ' + text);
+        
     }
 
     /**

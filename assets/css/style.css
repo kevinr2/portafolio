@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Bubblegum+Sans&family=Finger+Paint&family=Poller+One&display=swap');
 
+:root{
+    --color-2:#00295e;
+}
 
 *{
-    font-family: 'Bubblegum Sans', cursive;
+    /* font-family: 'Bubblegum Sans', cursive; */
+    font-family: 'Roboto Mono', monospace;
+   
 }
-h1{
-    text-align: center;
-    color: azure;
-}
+
 body{
-background: #141E30;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*     background: #360033;  
+    background: -webkit-linear-gradient(to right, #0b8793, #360033); 
+    background: linear-gradient(to right, #0b8793, #360033);  */
+    background: #283048;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 }
 #toggle{
@@ -23,11 +29,10 @@ background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, F
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.2s;
+    transition: 0.8s;
 }
 #toggle.active::before{
     transform:translateY(0px) rotate(45deg);
-
     box-shadow:  0 0px 0 #fff;
 }
 #toggle.active::after{
@@ -36,28 +41,34 @@ background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, F
 #toggle::before{
     content: '';
     position: absolute;
-    width: 30px; 
+    width: 50px; 
     height: 2px;
     background-color: aliceblue; 
     transition: 0.2s;
     transform:translateY(-10px);
-    box-shadow:  0 10px 0 #fff;
+    box-shadow: 0 10px 0 0 aliceblue;
 }
 #toggle::after{
     content: '';
     position: absolute;
-    width: 30px; 
+    width: 50px; 
     height: 2px;
     background-color: aliceblue; 
     transition: 0.2s;
     transform:translateY(10px);
+   
 }
+.toggle-2{
+    background-color: var(--color-2);
+}
+
 
 /* menu  */
 .menu{
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color:var(--color-2);
+   /*  background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% ); */
     position: fixed;
     z-index: 10;
     display: flex;
@@ -74,16 +85,28 @@ background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, F
 .menu.active{
     left: 0;
 }
-.menu >ul >li >a{
+
+
+.menu >ul>li >a{
     color: #fff;
     line-height: 2;
     font-size: 50px;
     text-transform: uppercase;
     font-family: 'Permanent Marker', cursive; 
+    font-weight: bold;
+}
+.menu>ul>li>a:hover{
+    transition: .4s ease-in-out;
+    border-bottom: #fff 1px solid;
+    letter-spacing: 3px;
 }
 
 a{
-    text-decoration: none;  
+    text-decoration: none; 
+    color: #fff; 
+}
+a:hover{
+    color: #fff; 
 }
 li{
     list-style: none;
@@ -102,15 +125,235 @@ li{
 
 .bl{
     color: #fff;
-    font-size: 2rem;
-}
-.bl:active{
-    color: aliceblue;
+    font-size: 2.4rem;
+    transition: 1s ease;
+    font-weight: bold;
 }
 .bl:hover{
-    color: azure;
+    color: white;
 }
+.bl2{
+    color: var(--color-2);
+    font-weight: bold;
+    font-size: 2.4rem;
+    transition: 1s ease;
+}
+.bl2.active{
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+}
+.bl2:hover{
+    color: var(--color-2);
+}
+
+
 .bl.active{
-    opacity: -1;
-    transition: 0.2s;
+    animation-duration:1s;
+    animation-name: aparecer;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    transition: 1s ease;
+    color:#fff;
+    
  }
+ ::-webkit-scrollbar{
+     display: none;
+ }
+
+ @keyframes aparecer {
+    
+    0%{
+        color: #fff;
+    }
+    50%{
+        opacity: -1;
+    }
+    100%{
+        opacity: 1;
+    }
+
+ }
+
+#fp-nav.actived{
+     display: none;
+ }
+.home{
+    width: 100%;
+    height: 100%;
+    padding: 0px 5%;
+    padding-bottom: 2%;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home-s2{
+    width: 100%;
+    height: 100%;
+    padding: 0px 5%;
+    padding-bottom: 2%;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cuadro{
+    width: 85%;
+    height: 75%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    line-height: 2rem;
+    overflow: hidden;
+    /* border:  1px solid linear-gradient(to right, #859398, #283048);; */
+    border-radius: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
+}
+.cuadro2{
+    width: 85%;
+    height: 75%;
+    padding-left: 4%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content:center;
+    line-height: 2rem;
+    overflow: hidden;
+    /* border:  1px solid linear-gradient(to right, #859398, #283048);; */
+    border-radius: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
+}
+.cuadro3{
+    width: 85%;
+    height: 75%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2rem;
+    overflow: hidden;
+    /* border:  1px solid linear-gradient(to right, #859398, #283048);; */
+    border-radius: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
+}
+.cuadro4{
+    width: 85%;
+    height: 75%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2rem;
+    overflow: hidden;
+    transform: translate(37px, 26px);
+
+    border-radius: 5px;
+}
+.cuadro-icons{
+    width: 85%;
+    height: 75%;
+    padding-left: 20%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content:center;
+    line-height: 2rem;
+    overflow: hidden;
+    /* border:  1px solid linear-gradient(to right, #859398, #283048);; */
+    border-radius: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
+}
+
+
+
+.title-home{
+    font-size: 11vh;
+    text-align: center;
+    font-weight: bold;
+    color:  #fff;
+    font-family: 'Qahiri', sans-serif; 
+    
+}
+.text-habilidades{
+    text-align: left;
+    color:#000;
+}
+.texto-proyectos{
+    position: absolute;
+}
+
+#icons{
+    color:  #002f6c;
+    font-size: 5vh;
+    text-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;;
+}
+
+.footer{
+    width: 100%;
+    height: 60px;
+    margin-top: -80px;
+    padding: 0 5%;
+    text-align: center;
+    
+}
+.navS{
+    background-color: #00295e;
+}
+
+.s2{
+    background-color: #fff;
+}
+.s4{
+    background-color: #fff;
+}
+
+p{
+    color: #ccc;
+}
+.title-proyect{
+    font-family: 'Qahiri', sans-serif; 
+    font-size: 8vh;
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.plantillas{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.d1{
+    background-image: url('../img/gym.png');
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+}
+.d2{
+    background-image: url('../img/ferreteria.png');
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    
+}
+.d3{
+    background-image: url('../img/juego.png');
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+
+}
+.aire{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
