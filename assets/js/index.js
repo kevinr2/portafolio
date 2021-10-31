@@ -5,8 +5,8 @@ const seccion = new fullpage('#fullpage',{
     navigationTooltips: ['Header', 'Section #1', 'Section # 3', 'hola'], // Tooltips que mostrara por cada boton.
     showActiveTooltip: false, // Mostrar tooltip activa.
     scrollBar: true,
-    autoScrolling: true
-
+    autoScrolling: true,
+    slidesNavigation: true,
 });
 
 
@@ -31,7 +31,6 @@ const span = document.querySelectorAll('#v1')
 const progreso = ()=>{
     
     let progreso = document.documentElement.scrollTop;
-    console.log(progreso)
     if (progreso >= '568' && progreso <= '1135' || progreso >='1703') {
         toggle.classList.add('toggle-2')
         icon.classList.add('bl2')
