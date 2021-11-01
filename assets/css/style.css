@@ -97,7 +97,6 @@ body{
     line-height: 2;
     font-size: 50px;
     text-transform: uppercase;
-    font-family: 'Permanent Marker', cursive; 
     font-weight: bold;
 }
 .menu>ul>li>a:hover{
@@ -145,7 +144,6 @@ li{
 }
 .bl2.active{
     color: white;
-    font-family: 'Permanent Marker', cursive;
 }
 .bl2:hover{
     color: var(--color-2);
@@ -155,7 +153,6 @@ li{
 .bl.active{
     animation-duration:1s;
     animation-name: aparecer;
-    font-family: 'Permanent Marker', cursive;
     font-weight: bold;
     transition: 1s ease;
     color:#fff;
