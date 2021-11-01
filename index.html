@@ -12,14 +12,16 @@
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <title>Kev</title>
+    <style>
+    ::-webkit-scrollbar{
+     display:none;
+    }
+    </style>
 </head>
 <body>
-    <div class="load-container">
-        <div class="loading-screen"></div>
-    </div>
     <div id="menu" class="menu" >
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#">Inicio</a></li>
             <li><a href="#">Habilidades</a></li>
             <li><a href="#">Proyectos</a></li>
             <li><a href="#">Contacto</a></li>
@@ -32,7 +34,7 @@
         <div id="toggle" class=""></div>
     </div>
     <div id="fullpage">
-        <div  class="section  s1">
+        <div  class="section  s1 bg">
             <div class="home">
                 <div class="cuadro">
                     <p  style="text-align: center;">Mi Nombre es <b   style="font-size: 20px; color: aliceblue;" class="nombre">Kevin Revelo</b> </p>
@@ -40,18 +42,18 @@
                     <p class="text-center  parrafos" id="p1">Tecnologo en analisis y desarrollo de sistemas de informacion en la ciudad de cali,colombia.Amante a la programacion,
                          apasionado por el aprendizaje continuo y toma de retos que me ayuden crecer como profesional.   
                         </p>
-                        <button id="boton"  class="btn btn btn-secondary">ver mas </button>
+                        <a  href="assets/cv/curriculum vitae2.pdf" target="_blank"  class="btn btn btn-secondary">ver mas </a>
                 </div>
             </div>
         </div>
-        <div  class="section s2">
+        <div  class="section s2 ">
             <div class="home-s2">
                 <div class="cuadro2">
                     <h4 class="text-habilidades">Habilidades</h4>
                     <p  class="text-habilidades parrafos">Me gusta desarrollar productos escalables con excelentes experiencias de usuario.
                         mi Fuerte es Frontend, pero estoy profesionalizando el  backend aprendiendo  en node.js y sql
                     </p>
-                    <a href=""  class="btn btn-outline-primary">ver mas</a>
+                    <a href="" class="btn btn-outline-primary">ver mas</a>
                 </div>
                 <div id="otro" class="cuadro-icons">
                     <div class="dentro">
@@ -71,7 +73,7 @@
                 </div>
             </div>
         </div>
-        <div  class="section s3">
+        <div  class="section s3 bg">
             <div class="slide"> 
                 <div class="pro1">
                    <a href="https://kevinr2.github.io/JuegoMemoria/" target="_blank" > <img src="assets/img/juego-min.png" class="img-thumbnail" width="300px" height="300px" alt=""></a>
@@ -100,12 +102,6 @@
                         <p>pagina landing page reponsive desing</p>
                     </div>
                 </div>
-                <div class="slide">
-                    <div class="pro1">
-                        <h2 class="" > Mas informacion</h2>
-                        <a href="" class="btn btn btn-secondary">Ir</a>  
-                    </div>
-                </div>
         </div>
         <div   class="section s4">
             <div class="home">
@@ -128,10 +124,7 @@
     </div> 
     
 </body>
-
 <script src="assets/js/fullpage.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/index.js"></script>
-
-
 </html>
