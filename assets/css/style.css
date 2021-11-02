@@ -327,7 +327,8 @@ li{
 }
 
 p{
-    color: #ccc;
+  color: #ccc;
+    
 }
 .title-proyect{
     font-weight: bold;
@@ -408,9 +409,7 @@ p{
     justify-content: center;
     align-items: center;
 }
-.n{
-    background-color: #00295e;
-}
+
 .d{
     background-color: #4bedc2;
 }

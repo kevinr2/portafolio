@@ -1,14 +1,10 @@
-/*@ Barras de progreso HTML5 animadas con Javascript
-@ author Agust�n Baraza (contacto@nosolocss.com)
-@ Copyright 2014 nosolocss.com. All rights reserved
-@ http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-@ link http://www.nosolocss.com 	 */
+
 
 
 
 body{
 	font-family: "Arial", Helvetica, sans-serif;
-	color:#333;
+	color:black;
 }
 
 .center{
@@ -35,6 +31,15 @@ h1 p{
 .tit{
 	margin-left: -51px;
 }
+.title-skills{
+	font-size: 40px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.p-pro{
+	font-weight: bold;
+	color: #222;
+}
 
 progress[value] {
 	/* Elimino la apariencia por defecto */
@@ -52,7 +57,7 @@ progress[value] {
 	
 /* 	Estos estilos solo se aplicaran al fondo de la barra en mozilla */
 	overflow:hidden;
-	background-color:#D8D8D8;
+	background-color:black;
 	border-radius : 20px ; 
 }
 
@@ -64,6 +69,7 @@ progress[value] {
 
 .pro span{
 	font-weight:bold;
+	color: #222;
 }
 
 /* Compatibilidad de color en Firefox, Chrome y Safari */
