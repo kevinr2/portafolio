@@ -98,32 +98,3 @@ const tl = gsap.timeline({
     })
  
 
-   /*  boton redireccion */
-
-   const bot = document.querySelector('#boton')
-
-    bot.addEventListener('click',()=>{
-        setTimeout(()=>pageTransition(),100) 
-       setTimeout(()=>document.location.href="pag/about.html",2500)
-       
-    })
-
-    function pageTransition() {
-        var tl = gsap.timeline();
-        tl.to(".loading-screen", {
-            duration: 1.2,
-            width: "100%",
-            left: "0%",
-            ease: "Expo.easeInOut",
-        });
-    
-        tl.to(".loading-screen", {
-            duration: 1,
-            width: "100%",
-            left: "100%",
-            ease: "Expo.easeInOut",
-            delay: 0.3,
-        });
-        tl.set(".loading-screen", { left: "-100%" });
-        
-    }
