@@ -21,6 +21,15 @@ toggle.onclick= ()=>{
     menu.classList.toggle('active')
     nav.classList.toggle('active')
 }
+
+const enlace = document.querySelectorAll('#enlace');
+
+enlace.forEach( item =>{
+    item.onclick= ()=>{
+        menu.classList.remove('active')
+    }
+})
+
 /*efectos menu scroll*/
 window.addEventListener('scroll',()=>{
     progreso()
